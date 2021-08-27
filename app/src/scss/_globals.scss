@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    @include custum-size(100vh);
+}
+.container{
+    @include container();
+    @include center();
+}
