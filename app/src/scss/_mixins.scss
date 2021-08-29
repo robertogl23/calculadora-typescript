@@ -1,3 +1,19 @@
+// 
+// RESPONSE MOBILE
+// 
+@mixin mobile {
+    @media only screen and (max-width: $Mobile) {
+      @content;
+    }
+  }
+// 
+// RESPONSE DESKTOP
+// 
+@mixin desktop {
+    @media only screen and (min-width: $Desktop) {
+        @content;
+    }
+}
 @mixin center {
     display: flex;
     align-items: center;
@@ -8,5 +24,12 @@
     width: $width;
 }
 @mixin container($height: 100%,$width:100%) {
+    display: block;
     @include custum-size( );
+    @include desktop {
+        background: brown;
+    }
+    @include mobile{
+        background: cadetblue;
+    }
 }
