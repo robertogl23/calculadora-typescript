@@ -97,8 +97,11 @@ h1,span{
     letter-spacing: 1px;
 
 }
+.pointer{
+    cursor: pointer;
+}
 .numbers{
-    padding: 2px 6px;
+    // padding: 2px 6px;
     @include custum-size(30%); 
     span{
         // padding: 4px;
@@ -107,16 +110,29 @@ h1,span{
         // text-align: center;
         @include center();
     }
+    .btn-t{
+        @include custum-size(80%,1.4rem);
+
+    }
 }
 .buttons{
     background: var(--VeryDarkDesaturatedBlueToggle);
-    padding: 2px 6px;
+
     border-radius: var(--BorderRadius);
     @include custum-size(30%);
     .circle{
-        @include custum-size(65%,.8rem);
+        @include custum-size(80%,.8rem);
         background: var(--RedKeyBackgroundToggle);
         border-radius: 100%;
+    }
+    span{
+        cursor: pointer;
+        font-size: 10px;
+        // @include custum-size(80%);
+    }
+    .btn-t{
+        @include custum-size(80%,1.4rem);
+
     }
 }
 .display-results-calc{

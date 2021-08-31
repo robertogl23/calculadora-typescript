@@ -7,13 +7,15 @@ class Theme {
     private defaultTheme : THEMES = THEMES.THEME_1;
     private readonly keyLS : string = "theme-calc";
     private browserTheme : THEMES = parseInt(localStorage.getItem(this.keyLS)!) || this.defaultTheme;
-    constructor() {
-        this.changeTheme(this.getTheme());
+
+    constructor() 
+    {
+        this.changeTheme(this.getThemeValidated(this.browserTheme));
     }
 
-    public getTheme() : THEMES 
+    public getThemeValidated(theme : THEMES) : THEMES 
     {
-        if( this.browserTheme <= 3 ) return this.browserTheme;
+        if( theme <= 3 && theme > 0) return theme;
 
         return this.defaultTheme;
     }
