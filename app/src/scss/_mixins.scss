@@ -23,13 +23,17 @@
     height: $height;
     width: $width;
 }
-@mixin container($height: 100%,$width:100%) {
-    display: block;
-    @include custum-size( );
-    @include desktop {
-        background: brown;
+@mixin container($height: 100%,$width:100%,$responsive:false) {
+    // display: block;
+    @if $responsive {
+        @include desktop {
+            @include custum-size($height,$width);
+        }
+        @include mobile{
+            @include custum-size($height,86%);
+        }
     }
-    @include mobile{
-        background: cadetblue;
+    @else {
+        @include custum-size($height,$width);
     }
 }
