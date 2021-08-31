@@ -1,7 +1,5 @@
-const { HotModuleReplacementPlugin } = require("webpack");
-const { merge }                      = require("webpack-merge");
-const common                         = require("./webpack.common");
-
+const { merge }            = require("webpack-merge");
+const common               = require("./webpack.common");
 /** @type {import('webpack').Configuration} */
 const devConfig = 
 {
@@ -17,6 +15,7 @@ const devConfig =
         open        : "chrome",
         hot         : false,
     },
+
 };
 
 module.exports = merge(common, devConfig);
