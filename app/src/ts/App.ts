@@ -1,11 +1,12 @@
-import Theme from "./Theme";
+import ToggleTheme from "./ToggleTheme";
 
 export default class App 
 {
-    static isTheme : Theme = new Theme(); 
+    
     static Start() : void 
     {
-        console.log("Start App");
+        const toggleTheme : ToggleTheme = new ToggleTheme();
+        toggleTheme.StartTheme();
     }
 }
 

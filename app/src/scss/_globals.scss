@@ -131,7 +131,7 @@ h1,span{
         // @include custum-size(80%);
     }
     .btn-t{
-        @include custum-size(80%,1.4rem);
+        @include custum-size(80%,100%);
 
     }
 }
