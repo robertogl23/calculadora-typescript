@@ -5,8 +5,8 @@ const devConfig =
 {
     mode      : "development",
     target    : "web",
-    // devtool   : "eval-source-map",
-    devtool : "source-map",
+    devtool   : "eval-source-map",
+    // devtool : "source-map",
 
     devServer : 
     {

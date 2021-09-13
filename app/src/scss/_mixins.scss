@@ -14,6 +14,39 @@
         @content;
     }
 }
+@mixin key{
+    border:none;
+    border-radius: .4rem;
+    cursor: pointer;
+    &:active{
+        transform: scale(.9)
+    }
+    
+}
+@mixin key-3 {
+    @include key();
+    font-size: 32px;
+    font-weight: 800;
+    background: var(--KeyBackground-3);
+    border-bottom: 3px solid var(--KeyShadow-3);
+    color: var(--ColorText-1);
+}
+@mixin key-2 {
+    @include key();
+    background: var(--KeyBackground-2);
+    border-bottom: 3px solid var(--KeyShadow-2);
+    color: var(--ColorText-3);
+    font-size: 24px;
+    font-weight: 600;
+}
+@mixin key-1 {
+    @include key();
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--KeyBackground-1);
+    border-bottom: 3px solid var(--KeyShadow-1);
+    color: var(--ColorText-1);
+}
 @mixin center {
     display: flex;
     align-items: center;
