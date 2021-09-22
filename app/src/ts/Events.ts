@@ -3,33 +3,31 @@ import ToggleTheme from './ToggleTheme';
 
 class Events {
 	public static onDragStart(event: any) {
-		event.dataTransfer.setData(
-			'text/plain',
-			event.target.id
-		);
-		console.log('hola1',event.target);
+		event.dataTransfer.setData('text/plain', event.target.id);
+		console.log('primero', event.target);
 	}
 
 	public static onDragOver(event: any): void {
 		event.preventDefault();
+		console.log('valido');
 	}
 
 	public static onDrop(event: any): void {
 		const id = event.dataTransfer.getData('text');
 		console.log(id);
 		// circulo
-		const draggableElement = document.getElementById(id);
+		// const draggableElement = document.getElementById(id);
 
-		// zona donde soltar circulo
-		const dropzone = event.target;
+		// // zona donde soltar circulo
+		// const dropzone = event.target;
 
-		console.log(draggableElement);
-		console.log(dropzone);
-		draggableElement?.setAttribute('theme', `${dropzone.id}`);
-		dropzone?.appendChild(draggableElement);
-		const idDrop = dropzone.id;
-		const toggle: ToggleTheme = new ToggleTheme();
-		toggle.changeTheme(parseInt(idDrop), false);
+		// console.log(draggableElement);
+		// console.log(dropzone);
+		// draggableElement?.setAttribute('theme', `${dropzone.id}`);
+		// dropzone?.appendChild(draggableElement);
+		// const idDrop = dropzone.id;
+		// const toggle: ToggleTheme = new ToggleTheme();
+		// toggle.changeTheme(parseInt(idDrop), false);
 		event.dataTransfer.clearData();
 	}
 
